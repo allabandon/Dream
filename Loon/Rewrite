@@ -12,3 +12,11 @@ http-response ^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv
 #http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=10
 #人人视频签到
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js, tag=rrtv.js
+
+
+#all_in_one签到
+cron "30 0 * * *" script-path=https://raw.githubusercontent.com/sazs34/TaskConfig/master/all_in_one.js, tag=all_in_one.js
+#获取百度贴吧cookie
+http-request ^https?:\/\/tieba.baidu\.com script-path=https://raw.githubusercontent.com/sazs34/TaskConfig/master/all_in_one.js, requires-body=true, timeout=10, tag=all_in_one.js
+#获取人人视频cookie
+http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js, timeout=10
