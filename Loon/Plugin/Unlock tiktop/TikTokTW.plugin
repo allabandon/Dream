@@ -1,0 +1,8 @@
+[URL重写]
+（？<= _ region =）CN（？=＆）TW 307
+（？<=＆app_version =）1（6 | 7）..（？=。？。？＆）1307
+（？<= \？version_code =）1（6 | 7）..（？=。？。？＆）1307
+
+[MITM]
+主机名= * .tiktokv.com，*。byteoversea.com，*。musical.ly，*。snssdk.com
+©2020 GitHub，Inc.
