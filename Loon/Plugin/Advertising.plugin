@@ -1,3 +1,10 @@
+#!name=Advertising
+#!desc=广告规则
+#!system=ios
+
+
+
+
 [URL Rewrite]
 # 0~9
 # > 21st Century Business Herald - api.21jingji.com
