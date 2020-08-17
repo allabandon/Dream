@@ -8,7 +8,7 @@
 http-request https:\/\/((weather-data\.apple)|(api.weather))\.com script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, require-body=false
 
 #由于Loon tf 194插件暂不支持本地修改cron,所以建议添加到本地脚本目录自行调整
-#cron "40 7 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+#cron "7-22/2 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
 
 [MITM]
 hostname=weather-data.apple.com, api.weather.com
