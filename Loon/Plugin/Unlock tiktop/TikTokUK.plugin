@@ -1,7 +1,7 @@
-[URL重写]
+[Url Rewrite]
 （？<= _ region =）CN（？=＆）英国307
 （？<=＆app_version =）1（6 | 7）..（？=。？。？＆）1307
 （？<= \？version_code =）1（6 | 7）..（？=。？。？＆）1307
 
 [MITM]
-主机名= * .tiktokv.com，*。byteoversea.com，*。musical.ly，*。snssdk.com
+hostname = * .tiktokv.com，*。byteoversea.com，*。musical.ly，*。snssdk.com
