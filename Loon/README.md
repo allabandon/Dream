@@ -1,9 +1,9 @@
 # 前言
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+)此文件夹为个人使用LOON相关资料
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 此文件夹为个人使用LOON相关资料
 
 # 什么是规则
 
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+)规则，决定了当一个请求进来时，如何通过匹配类型进行匹配，以及如何选用对应的策略
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) 规则，决定了当一个请求进来时，如何通过匹配类型进行匹配，以及如何选用对应的策略
 
 ## 为什么代理软件要设置规则
 
@@ -23,12 +23,12 @@
 
 匹配名称|匹配类型|说明
 -|-|-
-基于域名后缀|DOMAIN-SUFFIX|如基于.com/.cn/.org
-基于域名完整匹配|DOMAIN|无
-基于域名关键字|DOMAIN-KEYWORD|无
+基于域名后缀|DOMAIN-SUFFIX|如基于.com/.cn/.org/.net
+基于域名完整匹配|DOMAIN|如baidu.com,命中含有此域名的主域名子域名匹配
+基于域名关键字|DOMAIN-KEYWORD|如google,命中域名内含有此关键词域名匹配
 基于用户代理串|USER-AGENT|根据 Http 的 user-agent 值来进行匹配，支持带有 \* , ? 的通配符匹配
 基于URL正则|URL-REGEX|无
-基于请求IP范围|IP-CIDR|通常用作局域网匹配
+基于请求IP范围|IP-CIDR|通常用作局域网匹配，指定IP匹配
 基于IP定为国家编码|GEOIP|CN中国
 兜底匹配|FINAL|如果没有匹配的规则，默认使用的匹配
 
