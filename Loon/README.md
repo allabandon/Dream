@@ -24,7 +24,7 @@
 匹配名称|匹配类型|说明
 -|-|-
 基于域名完整匹配|DOMAIN|如baidu.com,命中含有此域名的主域名子域名匹配
-基于域名后缀|DOMAIN-SUFFIX|如基于.com/.cn/.org/.net
+基于域名后缀|DOMAIN-SUFFIX|如.com/.cn/.org/.net
 基于域名关键字|DOMAIN-KEYWORD|如google,命中域名内含有此关键词域名匹配
 基于用户代理串|USER-AGENT|根据 Http 的 user-agent 值来进行匹配，支持带有 \* , ? 的通配符匹配
 基于URL正则|URL-REGEX|无
