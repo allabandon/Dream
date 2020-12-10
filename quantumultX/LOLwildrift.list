@@ -1,4 +1,5 @@
 # 2020.10.30  16.28
-HOST-SUFFIX,riotcdn.net
-HOST-SUFFIX,wr.pvp.net
-HOST-SUFFIX,riotgames.com
+
+DOMAIN-SUFFIX,riotgames.com,PROXY
+DOMAIN-SUFFIX,wr.pvp.net,PROXY
+DOMAIN-SUFFIX,riotcdn.net,PROXY
