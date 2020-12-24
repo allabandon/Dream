@@ -35,5 +35,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: 运行云互助
         run: JD-shaer.js
-          echo Add other actions to build,
-          echo test, and deploy your project.
