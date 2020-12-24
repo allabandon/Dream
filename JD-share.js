@@ -6,6 +6,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode1") || "MTAxODcxOTI2NTAwMDAwMDAyNzE4ODA0Nw==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZyCOvQIT8ryyh4d0sw",
     jxgc: $.getdata("jx_shareCode1") || "F5MhtGqrZSEiNUuvvQSFZg==",
+    jdzz: $.getdata("zz_shareCode1") || "S5KkcAGh5iw2wYGCI5Yt3",
   },
   {
     zd: $.getdata("zd_shareCode2") || "",
@@ -13,6 +14,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "",
     ddgc: $.getdata("dd_shareCode2") || "",
     jxgc: $.getdata("jx_shareCode2") || "",
+    jdzz: $.getdata("zz_shareCode2") || "",
   },
 ];
 $.result = [];
@@ -51,6 +53,12 @@ $.random = Math.floor(Math.random() * 8);
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
+      ));
+    await $.wait($.random);
+    jdzz &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
+        "京东赚赚"
       ));
   }
   await showMsg();
