@@ -24,4 +24,4 @@ jobs:
                   npm install
             - name: "运行 【云互助】"
               run: |
-                  node JD-share,js
+                  node JD-share.js
