@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【京豆昨日收益】"
+            - name: "运行 【云互助码】"
               run: |
                   node JD-share.js
               env:
