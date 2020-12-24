@@ -10,7 +10,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_bean_change
+        types: Dream
 
 jobs:
     build:
