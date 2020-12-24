@@ -5,7 +5,7 @@ const shareCodes = [
     nc: $.getdata("nc_shareCode1") || "f5037c0b238b4f4093409165bbec2929",
     mc: $.getdata("mc_shareCode1") || "MTAxODcxOTI2NTAwMDAwMDAyNzE4ODA0Nw==",
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5m9cZyCOvQIT8ryyh4d0sw",
-    jxgc: $.getdata("jx_shareCode1") || "k3XRgh9SqTEODDhQVrfL1A==",
+    jxgc: $.getdata("jx_shareCode1") || "F5MhtGqrZSEiNUuvvQSFZg==",
   },
   {
     zd: $.getdata("zd_shareCode2") || "",
