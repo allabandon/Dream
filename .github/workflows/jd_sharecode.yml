@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/lifeishard4me/Actions.git ~/Actions
+          git clone https://github.com/allabandon/Dream.git ~/Actions
       - name: 提交互助码
         run: |
           cd ~/Actions/.github
