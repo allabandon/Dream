@@ -1,0 +1,29 @@
+# File: .github/workflows/repo-sync.yml
+name: sync-此处填入action名称-scripts
+on:
+  schedule:
+    - cron: '5 15 * * *'#此处为同步运行时间
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: sync-sazs34-scripts
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ github.event.client_payload.PAT || secrets.PAT }} #此处PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: sync-此处填入action名称-scripts
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/sazs34/MyActions.git"#此处填入需要克隆的仓库git链接
+          source_branch: "master"
+          destination_branch: "main"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
