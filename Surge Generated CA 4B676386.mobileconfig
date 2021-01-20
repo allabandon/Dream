@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CertSubject</key>
+			<string>Surge Generated CA 4B676386</string>
+			<key>Expiry</key>
+			<real>672415369</real>
+			<key>IsIdentity</key>
+			<false/>
+			<key>IsRoot</key>
+			<true/>
+			<key>Issuer</key>
+			<string>Surge Generated CA 4B676386</string>
+			<key>PERSISTENT_REF</key>
+			<data>
+			Y2VydAAAAAAAAAOb
+			</data>
+			<key>PayloadDisplayName</key>
+			<string>Surge Generated CA 4B676386</string>
+			<key>PayloadIdentifier</key>
+			<string>0b13523e65476d28184e5c30e2c4abde204e3065a</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.pem</string>
+			<key>PayloadUUID</key>
+			<string>E1B4BB11-E404-4DE7-A2E2-B565D38DD162</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>UDID</key>
+			<string>00008020-00026D2414F1002E</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Surge Generated CA 4B676386</string>
+	<key>PayloadIdentifier</key>
+	<string>0b13523e65476d28184e5c30e2c4abde204e3065a</string>
+	<key>PayloadType</key>
+	<string>CertificateWrapper</string>
+	<key>PayloadUUID</key>
+	<string>6F2C70E4-493C-4FE0-8445-48D66081C7A6</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>ProfileWasEncrypted</key>
+	<false/>
+	<key>TargetDeviceType</key>
+	<integer>0</integer>
+</dict>
+</plist>
