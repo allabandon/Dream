@@ -122,11 +122,13 @@ function DockerEngine() {
         yum remove -y docker* runc >/dev/null 2>&1
     fi
 
-    ## 安装环境软件包
+    ## 安装环境软件包lvm2 git wget curl perl nodejs
     if [ $SYSTEM = "Debian" ]; then
-        apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+        sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+        sudo apt update && sudo apt install -y git wget curl nodejs npm perl
     elif [ $SYSTEM = "RedHat" ]; then
-        yum install -y yum-utils device-mapper-persistent-data lvm2
+        sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+        sudo yum update && sudo yum install -y git wget curl perl nodejs
     fi
 
     ## 更换 Docker CE 国内源
