@@ -125,10 +125,10 @@ function DockerEngine() {
     ## 安装环境软件包lvm2 git wget curl perl nodejs
     if [ $SYSTEM = "Debian" ]; then
         sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-        sudo apt update && sudo apt install -y git wget curl nodejs npm perl
+        sudo apt update && sudo apt install -y git wget yarn curl nodejs npm perl
     elif [ $SYSTEM = "RedHat" ]; then
         sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-        sudo yum update && sudo yum install -y git wget curl perl nodejs
+        sudo yum update && sudo yum install -y git wget yarn curl perl nodejs
     fi
 
     ## 更换 Docker CE 国内源
