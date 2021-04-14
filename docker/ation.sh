@@ -78,36 +78,4 @@ function Welcome() {
        echo  "   自己手动安装环境(退出)";;
     esac
 }
-
-function INSTALLATION_CLONE() {
-echo -e "\n1. 获取源码"
-[ -d ${JdDir} ] && mv ${JdDir} ${JdDir}.bak && echo "检测到已有 ${JdDir} 目录，已备份为 ${JdDir}.bak"
-git clone -b v3 https://gitee.com/highdimen/jd_shell ${JdDir}
-
-echo -e "\n2. 检查配置文件"
-[ ! -d ${JdDir}/config ] && mkdir -p ${JdDir}/config
-
-if [ ! -s ${JdDir}/config/crontab.list ]
-then
-  cp -fv ${JdDir}/sample/crontab.list.sample ${JdDir}/config/crontab.list
-  sed -i "s,MY_PATH,${JdDir},g" ${JdDir}/config/crontab.list
-  sed -i "s,ENV_PATH=,PATH=$PATH,g" ${JdDir}/config/crontab.list
-fi
-crontab -l > ${JdDir}/old_crontab
-crontab ${JdDir}/config/crontab.list
-
-[ ! -s ${JdDir}/config/config.sh ] && cp -fv ${JdDir}/sample/config.sh.sample ${JdDir}/config/config.sh
-
-echo -e "\n3. 执行 git_pull.sh 进行脚本更新以及定时文件更新"
-bash ${JdDir}/git_pull.sh
-
-if [ ! -x "$(command -v pm2)" ]; then
-    echo "正在安装pm2,方便后续集成并发功能"
-    npm install pm2@latest -g
-fi
-echo -e "\n注意：原有定时任务已备份在 ${JdDir}/old_crontab"
-rm -f ${ShellDir}/${ShellName}
-
-echo -e "\n安装完成！！！！"
-}
 Welcome
