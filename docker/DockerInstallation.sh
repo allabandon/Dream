@@ -38,7 +38,8 @@ function Welcome() {
     echo -e "      1   debian/ubuntu/armbian/OpenMediaVault，以及其他debian系\n"
     echo -e "      2   CentOS/RedHat/Fedora等红帽系\n"
     echo -e "      3   Termux为主的安卓系\n"
-    echo -e "      4   环境已安装，直接开始安装docker\n"
+    echo -e "      4   环境已安装，直接开始部署脚本\n"
+    echo -e "      5   自己手动安装环境(退出)\n"
     echo -e "      当前系统时间  $(date +%Y-%m-%d) $(date +%H:%M)"
     echo -e ''
     echo -e '#####################################################'
@@ -52,7 +53,7 @@ function Welcome() {
          echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
          exit 1
        else
-         echo -e "\n依赖安装完成,按任意键开始安装docker，否则按 Ctrl + C 退出！\n"
+         echo -e "\n依赖安装完成,按任意键开始部署脚本，否则按 Ctrl + C 退出！\n"
          read BEGINTOINSTALL
          INSTALLATION_CLONE
        fi
@@ -64,7 +65,7 @@ function Welcome() {
          echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
          exit 1
        else
-         echo -e "\n依赖安装完成,按任意键开始安装docker，否则按 Ctrl + C 退出！\n"
+         echo -e "\n依赖安装完成,按任意键开始部署脚本，否则按 Ctrl + C 退出！\n"
          read BEGINTOINSTALL
          INSTALLATION_CLONE
        fi
@@ -76,7 +77,7 @@ function Welcome() {
          echo -e "\n依赖未安装完整,请重新运行该脚本且切换良好的网络环境！\n"
          exit 1
        else
-         echo -e "\n依赖安装完成,按任意键开始安装docker，否则按 Ctrl + C 退出！\n"
+         echo -e "\n依赖安装完成,按任意键开始部署脚本，否则按 Ctrl + C 退出！\n"
          read BEGINTOINSTALL
          INSTALLATION_CLONE
        fi
@@ -91,6 +92,10 @@ function Welcome() {
          read BEGINTOINSTALL
          INSTALLATION_CLONE
        fi
+       ;;
+    * )
+       echo  "   自己手动安装环境(退出)";;
+    esac
 }
 
 
