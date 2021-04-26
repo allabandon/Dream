@@ -239,32 +239,6 @@ function DockerEngine() {
         yum install -y yum-utils device-mapper-persistent-data lvm2
     fi
 
-    ## 删除旧的 Docker CE 源
-    if [ $SYSTEM = ${SYSTEM_DEBIAN} ]; then
-        sed -i '/docker-ce/d' ${DebianSourceList}
-        rm -rf ${DockerSourceList}
-    elif [ $SYSTEM = ${SYSTEM_REDHAT} ]; then
-        rm -rf ${DockerRepo}
-    fi
-
-    ## 配置 Docker CE 源
-    if [ $SYSTEM = ${SYSTEM_DEBIAN} ]; then
-        if [ $SYSTEM_NAME = ${SYSTEM_KALI} ]; then
-            curl -fsSL https://${SOURCE}/docker-ce/linux/debian/gpg | apt-key add -
-        else
-            curl -fsSL https://${SOURCE}/docker-ce/linux/${SOURCE_BRANCH}/gpg | apt-key add -
-        fi
-
-        echo "deb [arch=${SOURCE_ARCH}] https://${SOURCE}/docker-ce/linux/${SOURCE_BRANCH} $SYSTEM_VERSION stable" | tee ${DockerSourceList} >/dev/null 2>&1
-
-        if [ $SYSTEM_NAME = ${SYSTEM_KALI} ]; then
-            sed -i "s/${SYSTEM_VERSION}/buster/g" ${DockerSourceList}
-            sed -i "s/${SOURCE_BRANCH}/debian/g" ${DockerSourceList}
-        fi
-    elif [ $SYSTEM = ${SYSTEM_REDHAT} ]; then
-        yum-config-manager -y --add-repo https://${SOURCE}/docker-ce/linux/${SOURCE_BRANCH}/docker-ce.repo
-    fi
-
     ## 安装 Docker Engine
     if [ $SYSTEM = ${SYSTEM_DEBIAN} ]; then
         apt-get update
@@ -273,30 +247,6 @@ function DockerEngine() {
         yum makecache
         yum install -y docker-ce docker-ce-cli containerd.io
     fi
-
-    ## 配置镜像加速器
-    ImageAccelerator
-}
-
-## 配置镜像加速器：
-function ImageAccelerator() {
-    ## 创建目录和文件
-    if [ -d ${DockerDirectory} ] && [ -e ${DockerConfig} ]; then
-        if [ -e ${DockerConfigBackup} ]; then
-            echo -e "\n\033[32m└ 检测到已备份的 Docker 配置文件，跳过备份操作 ...... \033[0m\n"
-        else
-            cp -rf ${DockerConfig} ${DockerConfigBackup}
-            echo -e "\n\033[32m└ 已备份原有 Docker 配置文件至 ${DockerConfigBackup} ...... \033[0m\n"
-        fi
-        sleep 2s
-    else
-        mkdir -p ${DockerDirectory} >/dev/null 2>&1
-        touch ${DockerConfig}
-    fi
-
-    ## 配置镜像加速器
-    echo -e '{\n  "registry-mirrors": ["https://SOURCE"]\n}' >${DockerConfig}
-    sed -i "s/SOURCE/$REGISTRY_SOURCE/g" ${DockerConfig}
 
     ## 启动 Docker Engine
     systemctl stop docker >/dev/null 2>&1
