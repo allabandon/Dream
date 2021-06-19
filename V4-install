@@ -1,0 +1,70 @@
+成功安装docker 以及docker compose
+本地导入镜像到指定目录
+切换到指定目录  $:cd /指定目录
+导入镜像$:docker image load -i 镜像名称.tar.gz
+docker项目安装
+docker run -dit \
+-v /appdata/jd/config:/jd/config \
+-v /appdata/jd/log:/jd/log \
+-v /appdata/jd/scripts:/jd/scripts \
+-v /appdata/jd/own:/jd/own \
+-e ENABLE_HANGUP=false \
+-e ENABLE_TG_BOT=true \
+--name jd \
+--hostname jd \
+--restart always \
+nevinee/jd:v4-bot
+npm安装：
+       $:docker exec -it jd bash
+       $:cd scripts
+       $:npm install
+bot依赖安装
+I. 配置环境依赖 (重点)
+添加Python3环境依赖
+
+// 首先进入容器内部
+docker exec -it jd bash
+
+//  添加python3环境依赖
+apk add python3 zlib-dev gcc jpeg-dev python3-dev musl-dev freetype-dev
+添加jbot环境依赖
+以下的1和2的操作是在京东容器中 (docker exec -it jd bash)
+
+设置pip3默认源
+
+1.国内环境 (没有代理，如果有代理请关闭代理关闭代理关闭代理)
+
+pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+国外环境 (官方源)
+
+pip3 config set global.index-url https://pypi.python.org/simple
+
+2.分别执行 三个命令 分别分别分别：
+
+python3 -m venv tutorial-env
+
+source tutorial-env/bin/activate
+
+pip3 install telethon python-socks[asyncio] pillow qrcode requests prettytable
+
+
+II. 配置jbot
+配置操作在宿主机中
+
+下载 文件里jbot 目录复制到jd容器的jbot目录下，
+
+重点重点重点：：：下载 文件bot.json 到jd容器的config映射目录下，根据以下操作添加相关参数到bot.json文件中
+
+A. 申请TG bot : 通过 https://t.me/BotFather ，按照提示创建机器人，获取bot_token，例如：12345677:AAAAAAAAA_a0VUo2jjr__CCCCDDD
+
+B. 获取user_id : 通过 https://t.me/getmyid_bot 获取
+
+C. 获取api_id和api_hash : 访问 https://my.telegram.org/ ，使用的TG账号登录 ==> 选择API development tools ==> 选择任意一种应用场景，任意命名，保存
+
+
+
+最后退出ssh，重新登录shh 执行下面命令
+docker exec -it jd bash
+
+nohup python3 -m jbot >/dev/null 2>&1 &
