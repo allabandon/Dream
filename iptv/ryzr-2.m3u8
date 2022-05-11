@@ -1,9 +1,9 @@
 #EXTM3U
-#EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/鳄鱼和它的邻居们（下）.png" group-title="其他",鳄鱼和它的邻居们（下）
+#EXTINF:-1,tvg-id="2" tvg-name="鳄鱼和它的邻居们（下）" tvg-logo="https://epg.112114.xyz/logo/鳄鱼和它的邻居们（下）.png" group-title="其他",鳄鱼和它的邻居们（下）
 http://hls.cntv.myalicdn.com/asp/hls/2000/0303000a/3/default/a966d8b00e394b448b6bb34d8a27cfd0/2000.m3u8
-#EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/冰雪世界历险记（上）.png" group-title="其他",冰雪世界历险记（上）
+#EXTINF:-1,tvg-id="2" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/冰雪世界历险记（上）.png" group-title="冰雪世界历险记",冰雪世界历险记（上）
 http://hls.cntv.myalicdn.com/asp/hls/2000/0303000a/3/default/c8d35c6b24674cbf8b14e89e2ed592f4/2000.m3u8
-#EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/冰雪世界历险记（下）.png" group-title="其他",冰雪世界历险记（下）
+#EXTINF:-1,tvg-id="2" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/冰雪世界历险记（下）.png" group-title="冰雪世界历险记",冰雪世界历险记（下）
 http://hls.cntv.myalicdn.com/asp/hls/2000/0303000a/3/default/7907b41ae9044bbc92c59185e1f6b70d/2000.m3u8
 #EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/奇妙的海岸生活（上）.png" group-title="其他",奇妙的海岸生活（上）
 http://hls.cntv.myalicdn.com/asp/hls/2000/0303000a/3/default/463484805d964936988c084eabbf3145/2000.m3u8
