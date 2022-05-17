@@ -1,20 +1,5 @@
 
 #EXTM3U
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁北方
-http://39.135.129.172/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226755/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁都市
-http://39.135.129.164/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226760/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁公共
-http://39.135.129.164/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226766/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁经济
-http://39.135.129.164/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226735/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁生活
-http://39.135.129.162/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226761/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁体育
-http://39.135.129.164/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226764/index.m3u8
-#EXTINF:-1 group-title="Export from 影音宝 - 听你想听的，看你想看的",辽宁影视剧
-http://39.135.129.162/hwottcdn.ln.chinamobile.com/PLTV/3/224/3221226738/index.m3u8
-
 #EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="http://n.ysyz.top:99/buyaolian/cctv1.png" group-title="高码央视卫视",CCTV1
 http://112.25.47.24/gitv_live/G_CCTV-1-HD-265-8M/G_CCTV-1-HD-265-8M.m3u8?p=GITV&area=JS_CMCC_CP
 #http://112.25.47.35/gitv_live/G_CCTV-1-HD-265-5M/G_CCTV-1-HD-265-5M.m3u8?p=GITV&area=JS_CMCC_CP
