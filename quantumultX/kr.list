@@ -1,0 +1,3 @@
+host *.*.nexon
+host-suffix nexon.com
+host-keyword nexon
