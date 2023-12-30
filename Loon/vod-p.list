@@ -5,6 +5,7 @@ DOMAIN,cdn.kin6c1.com
 DOMAIN,cdn.v82u1l.com
 #欧乐影视https://www.olevod.com
 DOMAIN-SUFFIX,olevod.com
+DOMAIN-SUFFIX,olelive.com
 
 #其他
 DOMAIN-SUFFIX,v1.mk
