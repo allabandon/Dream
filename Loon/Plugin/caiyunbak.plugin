@@ -1,0 +1,11 @@
+#!name = 彩云天气pro
+#!desc = 拆分测试
+#!openUrl = https://github.com/chxm1023/Script_X
+#!author = chxm1023
+#!homepage = https://t.me/chxm1023
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/caiyun.png
+[Script]
+http-response ^https:\/\/biz\.(caiyunapp|cyapi)\.(com|cn) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js, requires-body=true, timeout=10, tag=彩云天气
+[mitm]
+
+hostname = *.cyapi.cn, *.caiyunapp.com
