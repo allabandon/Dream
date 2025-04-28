@@ -1,11 +1,32 @@
 #!name = 彩云天气pro
-#!desc = 拆分测试
+#!desc = 用于测试loon更新插件功能更新时间12:33
 #!openUrl = https://github.com/chxm1023/Script_X
-#!author = chxm1023
+#!author = 测试开发者
 #!homepage = https://t.me/chxm1023
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/caiyun.png
+
+# 测试文本分界线
+[Url Rewrite]
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
+# 测试文本分界线
+
 [Script]
 http-response ^https:\/\/biz\.(caiyunapp|cyapi)\.(com|cn) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js, requires-body=true, timeout=10, tag=彩云天气
+# 测试文本分界线
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme/v1/aweme\/post\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_post
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/feed\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_feed.js
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/follow\/feed\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_follow.js
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/nearby\/feed\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_nearby.js
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/search\/item\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_item
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/general\/search\/single\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_search
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/hot\/search\/video\/list\/ script-path=https://Choler.github.io/Surge/Script/douyin.js, requires-body=true, timeout=10, tag=抖音_hot
+
 [mitm]
 
 hostname = *.cyapi.cn, *.caiyunapp.com
